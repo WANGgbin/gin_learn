@@ -1,22 +1,8 @@
 package main
 
-import (
-	"net/http"
-	"github.com/gin-gonic/gin"
-)
+// GIN 使用参考：https://gin-gonic.com/zh-cn/docs/examples/bind-body-into-dirrerent-structs/
 
 func main() {
-	r := gin.Default()
-	r.GET("/ping", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{
-			"message": "pong",
-		})
-	})
-	r.GET("/:name/:gender", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H {
-			c.Params[0].Key: c.Params[0].Value,
-			c.Params[1].Key: c.Params[1].Value,
-		})
-	})
-	r.Run() 
+
+	//gin.BasicAuth()
 }
