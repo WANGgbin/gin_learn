@@ -20,4 +20,5 @@ func main() {
 		ctx.String(http.StatusOK, "success")
 	})
 	app.Run()
+	gin.LoggerWithConfig()
 }
